@@ -1,0 +1,6 @@
+/* Desktop layout and horizontal navigation */
+@media screen and (min-width:768px){
+ .header-inner{padding:16px 28px}.menu-button{display:none}.site-nav{display:block}.nav-inner{flex-direction:row;justify-content:center;gap:24px}.nav-inner a{border-bottom:3px solid transparent;padding:12px 26px}.nav-inner a[aria-current="page"]{border-bottom:3px solid #64e0d3}
+ main{padding-top:32px}.hero{padding:34px 36px}.intro-grid{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}.course-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-content img{max-height:360px;object-fit:cover;object-position:center 35%}
+}
+@media screen and (min-width:1024px){.panel-content{padding:26px}.course-grid{gap:16px}.course-card{padding:20px}}
