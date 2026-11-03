@@ -169,7 +169,7 @@ main {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0 0 4px;
-    color: #08776f
+    color: #075047;
 }
 
 .hero-description {
@@ -231,11 +231,11 @@ main {
 
 .skills span {
     background: #e2f4f2;
-    color: #075e58;
+    color: #075047;
     border-radius: 100px;
     padding: 5px 11px;
     font-size: .8rem;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .photo-content {
