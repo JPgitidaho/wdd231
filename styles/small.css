@@ -1,11 +1,12 @@
 :root {
     --navy: #102c48;
     --accent: #087f77;
+    --accent-dark: #075047;
     --paper: #f3f6fa;
     --ink: #172b3f;
     --muted: #455568;
     --line: #d4dee8;
-    --white: #fff
+    --white: #ffffff;
 }
 
 * {
@@ -39,7 +40,7 @@ button {
 
 .site-header {
     background: var(--navy);
-    color: #fff
+    color: var(--white)
 }
 
 .header-inner {
@@ -82,7 +83,7 @@ button {
 
 .menu-button {
     background: transparent;
-    color: white;
+    color: var(--white);
     border: 1px solid #a8bdcf;
     border-radius: 8px;
     min-height: 44px;
@@ -108,7 +109,7 @@ button {
 }
 
 .nav-inner a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
     padding: 12px 20px;
@@ -169,7 +170,7 @@ main {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0 0 4px;
-    color: #075047;
+    color: var(--accent-dark);
 }
 
 .hero-description {
@@ -197,7 +198,7 @@ main {
 
 .panel h2 {
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--white);
     background: var(--navy);
     padding: 14px 18px;
     line-height: 1.4;
@@ -231,7 +232,7 @@ main {
 
 .skills span {
     background: #e2f4f2;
-    color: #075047;
+    color: var(--accent-dark);
     border-radius: 100px;
     padding: 5px 11px;
     font-size: .8rem;
@@ -272,7 +273,7 @@ main {
 
 .filter-controls button {
     border: 1px solid #aec0d2;
-    background: #fff;
+    background: var(--white);
     color: #183f5e;
     padding: 10px 14px;
     min-height: 44px;
@@ -283,13 +284,13 @@ main {
 
 .filter-controls button:hover,
 .filter-controls button:focus-visible {
-    border-color: #087f77;
+    border-color: var(--accent);
     background: #eaf6f4
 }
 
 .filter-controls button.selected {
     background: var(--navy);
-    color: white;
+    color: var(--white);
     border-color: var(--navy)
 }
 
@@ -319,7 +320,7 @@ main {
 
 .course-card h3 {
     font-size: 1.12rem;
-    color: #102c48;
+    color: var(--navy);
     margin: 0
 }
 
@@ -340,7 +341,7 @@ main {
 
 .site-footer {
     background: var(--navy);
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 28px 16px
 }
@@ -389,7 +390,7 @@ button:focus-visible {
   padding: 10px 14px;
   width: 100%;
   background-color: #12304a;
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: 6px;
   font: inherit;
