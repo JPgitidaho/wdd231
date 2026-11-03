@@ -1,6 +1,5 @@
 :root {
     --navy: #102c48;
-    --navy-2: #173d5b;
     --accent: #087f77;
     --paper: #f3f6fa;
     --ink: #172b3f;
@@ -318,58 +317,10 @@ main {
     border: 2px solid #3c7e47;
 }
 
-.course-card .card-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    align-items: flex-start
-}
-
 .course-card h3 {
     font-size: 1.12rem;
     color: #102c48;
     margin: 0
-}
-
-.course-card .tag {
-    font-size: .68rem;
-    color: #344d63;
-    background: #e5edf4;
-    padding: 3px 7px;
-    border-radius: 4px;
-    font-weight: 700;
-    white-space: nowrap
-}
-
-.course-card.completed .tag {
-    color: #075b42;
-    background: #c7ebd8
-}
-
-.course-card .card-title {
-    font-size: .94rem;
-    line-height: 1.35;
-    margin: 0;
-    flex-grow: 1
-}
-
-.course-card .card-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    align-items: center;
-    margin: 4px 0 0;
-    border-top: 1px solid #d2dce6;
-    padding-top: 10px;
-    font-size: .8rem
-}
-
-.course-card.completed .card-meta {
-    border-top-color: #afdac7
-}
-
-.status {
-    font-weight: 700
 }
 
 .credits {
@@ -457,11 +408,4 @@ button:focus-visible {
 
 .course-card.completed .course-toggle {
   background-color: #28643a;
-}
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px;
 }
