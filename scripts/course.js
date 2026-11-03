@@ -1,7 +1,4 @@
 
- // WDD 231 - Course Certificate
- // Course data
-
 const courses = [
   {
     subject: "CSE",
