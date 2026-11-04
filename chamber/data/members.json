@@ -1,0 +1,66 @@
+
+[
+  {
+    "name": "Andes Tecnología",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://andes-tecnologia.example",
+    "image": "andes-tecnologia.webp",
+    "membership": 3,
+    "category": "Technology and Software"
+  },
+  {
+    "name": "Valle Central Café",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://valle-central-cafe.example",
+    "image": "valle-central-cafe.webp",
+    "membership": 2,
+    "category": "Coffee Shop"
+  },
+  {
+    "name": "Rancagua Construcciones",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://rancagua-construcciones.example",
+    "image": "rancagua-construcciones.webp",
+    "membership": 3,
+    "category": "Construction"
+  },
+  {
+    "name": "O'Higgins Market",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://ohiggins-market.example",
+    "image": "ohiggins-market.webp",
+    "membership": 1,
+    "category": "Retail"
+  },
+  {
+    "name": "Cordillera Turismo",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://cordillera-turismo.example",
+    "image": "cordillera-turismo.webp",
+    "membership": 2,
+    "category": "Tourism"
+  },
+  {
+    "name": "Raíces del Valle",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://raices-del-valle.example",
+    "image": "raices-del-valle.webp",
+    "membership": 1,
+    "category": "Handmade Products"
+  },
+  {
+    "name": "Andes Consultores",
+    "address": "Dirección de demostración, Rancagua",
+    "phone": "No disponible",
+    "website": "https://andes-consultores.example",
+    "image": "andes-consultores.webp",
+    "membership": 2,
+    "category": "Professional Services"
+  }
+]

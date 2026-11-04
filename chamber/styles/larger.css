@@ -1,0 +1,66 @@
+
+@media (min-width: 640px) {
+    .members-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 800px) {
+    .header-container {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .brand-name {
+        font-size: 1.15rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .site-nav,
+    .site-nav.open {
+        display: block;
+        background-color: var(--surface);
+    }
+
+    .site-nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .site-nav a {
+        padding: 0.85rem 1.25rem;
+        border-radius: 0.5rem;
+        color: var(--primary);
+    }
+
+    main {
+        padding: 3rem 0 4rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .members-list .member-info {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: center;
+        gap: 0.75rem 1.5rem;
+    }
+
+    .members-list .member-info h2 {
+        margin: 0;
+    }
+
+    .footer-container {
+        padding-top: 2.5rem;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.1rem;
+    }
+}
