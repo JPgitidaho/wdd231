@@ -141,7 +141,7 @@ main {
     overflow: hidden;
     padding: 2.25rem 1.5rem;
     border-radius: 1rem;
-    background: linear-gradient(125deg, var(--primary), var(--secondary));
+    background-color: var(--primary);
     color: var(--surface);
 }
 
