@@ -1,10 +1,9 @@
-
 [
   {
     "name": "Andes Tecnología",
     "address": "101 Summit Avenue, Downtown Rancagua, Chile",
     "phone": "+56 9 0000 0101",
-    "website": "https://andes-tecnologia.example",
+    "website": "https://andestecnologia.example",
     "image": "andes-tecnologia.webp",
     "membership": 3,
     "category": "Technology and Software",
@@ -14,7 +13,7 @@
     "name": "Valle Central Café",
     "address": "225 Valley Street, Rancagua, Chile",
     "phone": "+56 9 0000 0102",
-    "website": "https://valle-central-cafe.example",
+    "website": "https://vallecentralcafe.example",
     "image": "valle-central-cafe.webp",
     "membership": 2,
     "category": "Food and Beverages",
@@ -24,7 +23,7 @@
     "name": "Rancagua Construcciones",
     "address": "340 Builders Avenue, Rancagua, Chile",
     "phone": "+56 9 0000 0103",
-    "website": "https://rancagua-construcciones.example",
+    "website": "https://rancaguaconstrucciones.example",
     "image": "rancagua-construcciones.webp",
     "membership": 3,
     "category": "Construction and Renovation",
@@ -34,7 +33,7 @@
     "name": "O'Higgins Market",
     "address": "115 Community Street, Rancagua, Chile",
     "phone": "+56 9 0000 0104",
-    "website": "https://ohiggins-market.example",
+    "website": "https://ohigginsmarket.example",
     "image": "ohiggins-market.webp",
     "membership": 1,
     "category": "Retail and Local Products",
@@ -44,7 +43,7 @@
     "name": "Cordillera Turismo",
     "address": "480 Mountain View Avenue, Rancagua, Chile",
     "phone": "+56 9 0000 0105",
-    "website": "https://cordillera-turismo.example",
+    "website": "https://cordilleraturismo.example",
     "image": "cordillera-turismo.webp",
     "membership": 2,
     "category": "Tourism and Recreation",
@@ -54,7 +53,7 @@
     "name": "Raíces del Valle",
     "address": "205 Artisan Street, Rancagua, Chile",
     "phone": "+56 9 0000 0106",
-    "website": "https://raices-del-valle.example",
+    "website": "https://raicesdelvalle.example",
     "image": "raices-del-valle.webp",
     "membership": 1,
     "category": "Handmade and Artisan Products",
@@ -62,12 +61,12 @@
   },
   {
     "name": "Andes Consultores",
-    "address": "510 Business Center Avenue, Rancagua, Chile",
+    "address": "560 Business Park Road, Rancagua, Chile",
     "phone": "+56 9 0000 0107",
-    "website": "https://andes-consultores.example",
+    "website": "https://andesconsultores.example",
     "image": "andes-consultores.webp",
-    "membership": 2,
+    "membership": 3,
     "category": "Business and Professional Services",
-    "description": "Business strategy, financial planning, administrative consulting, and professional support for entrepreneurs."
+    "description": "Financial consulting, business advisory services, and professional support for growing companies."
   }
 ]

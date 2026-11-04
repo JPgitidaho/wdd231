@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,26 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Business Directory | Rancagua Chamber of Commerce</title>
-    <meta name="description"
-        content="Explore the business directory of the Rancagua Chamber of Commerce in Chile. Discover local businesses, services, and opportunities.">
+    <meta name="description" content="Explore businesses, services, and opportunities in the Rancagua Chamber of Commerce directory, O'Higgins Region, Chile.">
     <meta name="author" content="Juana Perez">
     <meta name="theme-color" content="#264653">
 
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="preload" as="image" href="images/andes-tecnologia.webp" fetchpriority="high">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Business Directory | Rancagua Chamber of Commerce">
-    <meta property="og:description" content="Discover local businesses and services in Rancagua, Chile.">
+    <meta property="og:description" content="Discover local businesses and professional services in Rancagua, Chile.">
     <meta property="og:image" content="https://jpgitidaho.github.io/wdd231/chamber/images/og-image.webp">
     <meta property="og:url" content="https://jpgitidaho.github.io/wdd231/chamber/directory.html">
     <meta property="og:locale" content="en_US">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="image" href="images/andes-tecnologia.webp" fetchpriority="high">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -44,8 +43,13 @@
                 <span class="brand-name">Rancagua Chamber of Commerce</span>
             </a>
 
-            <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu"
-                aria-controls="primary-navigation" aria-expanded="false">
+            <button
+                id="menu-button"
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="primary-navigation"
+                aria-expanded="false">
                 ☰
             </button>
         </div>
@@ -62,22 +66,47 @@
 
     <main>
         <section class="directory-section" aria-labelledby="directory-heading">
+
             <div class="directory-header">
-                <h1 id="directory-heading">Business Directory</h1>
-                <p>Discover businesses, services, and organizations in Rancagua, Chile.</p>
+                <div class="directory-header-content">
+                    <p class="directory-eyebrow">RANCAGUA BUSINESS NETWORK</p>
+                    <h1 id="directory-heading">Business Directory</h1>
+                    <p class="directory-intro">
+                        Connect with local businesses, discover professional
+                        services, and explore the opportunities our community offers.
+                    </p>
+                </div>
             </div>
 
-            <div class="directory-controls" role="group" aria-label="Directory display options">
-                <button type="button" id="grid-view" class="view-button" aria-pressed="true">
-                    Grid View
-                </button>
+            <div class="directory-toolbar">
+                <div class="directory-toolbar-text">
+                    <span class="toolbar-indicator" aria-hidden="true"></span>
+                    <div>
+                        <h2>Explore Our Members</h2>
+                        <p>Local businesses. Real connections.</p>
+                    </div>
+                </div>
 
-                <button type="button" id="list-view" class="view-button" aria-pressed="false">
-                    List View
-                </button>
+                <div class="directory-controls" role="group" aria-label="Directory display options">
+                    <button
+                        type="button"
+                        id="grid-view"
+                        class="view-button"
+                        aria-pressed="true">
+                        Grid View
+                    </button>
+                    <button
+                        type="button"
+                        id="list-view"
+                        class="view-button"
+                        aria-pressed="false">
+                        List View
+                    </button>
+                </div>
             </div>
 
             <div id="members-container" class="members-grid" aria-live="polite"></div>
+
         </section>
     </main>
 
