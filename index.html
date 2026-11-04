@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Juana Perez's WDD 231 Web Frontend Development I course homepage: student profile, photo, certificate courses and dynamic credit totals.">
+  <meta name="description"
+    content="Juana Perez's WDD 231 Web Frontend Development I course homepage: student profile, photo, certificate courses and dynamic credit totals.">
   <meta name="author" content="Juana Perez">
   <meta name="theme-color" content="#102c48">
   <title>Home | WDD 231 | Juana Perez</title>
@@ -16,15 +18,22 @@
   <script src="scripts/date.js" defer></script>
   <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand"><img src="images/logo.svg" width="48" height="48" alt="JP website logo"><span>Juana Perez <small>Software Development Student</small></span></div>
-      <button type="button" id="menu-button" class="menu-button" aria-controls="navigation" aria-expanded="false" aria-label="Open navigation menu"><span aria-hidden="true">☰</span></button>
+      <div class="brand"><img src="images/logo.svg" width="48" height="48" alt="JP website logo"><span>Juana Perez
+          <small>Software Development Student</small></span></div>
+      <button type="button" id="menu-button" class="menu-button" aria-controls="navigation" aria-expanded="false"
+        aria-label="Open navigation menu"><span aria-hidden="true">☰</span></button>
     </div>
   </header>
   <nav id="navigation" class="site-nav" aria-label="Main navigation">
-    <div class="nav-inner"><a href="index.html" aria-current="page">Home</a><a href="chamber/index.html">Chamber</a><a href="final/index.html">Final</a></div>
+    <div class="nav-inner">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="chamber/index.html">Chamber</a>
+      <a href="final/index.html">Final</a>
+    </div>
   </nav>
   <main>
     <div class="hero">
@@ -40,21 +49,29 @@
         <h2 id="about-heading">About Me</h2>
         <div class="panel-content">
           <p class="hello">Hello, I'm Juana.</p>
-          <p>I'm a student software developer from Chile. I enjoy creating professional, accessible websites that combine clear design with practical functionality.</p>
-          <p>My interests include frontend development, responsive interfaces, JavaScript, and search engine optimization (SEO).</p>
-          <p>Through WDD 231, I'm strengthening my frontend skills and continuing my professional growth in software development.</p>
+          <p>I'm a student software developer from Chile. I enjoy creating professional, accessible websites that
+            combine clear design with practical functionality.</p>
+          <p>My interests include frontend development, responsive interfaces, JavaScript, and search engine
+            optimization (SEO).</p>
+          <p>Through WDD 231, I'm strengthening my frontend skills and continuing my professional growth in software
+            development.</p>
           <div class="skills"><span>HTML & CSS</span><span>JavaScript</span><span>SEO</span></div>
         </div>
       </section>
       <section class="panel photo-panel" aria-labelledby="photo-heading">
         <h2 id="photo-heading">Student Photo</h2>
-        <div class="panel-content photo-content"><img src="images/foto-perfil-wdd231.webp" alt="Portrait of Juana Perez at her web development workspace" width="720" height="703" loading="lazy"></div>
+        <div class="panel-content photo-content"><img src="images/foto-perfil-wdd231.webp"
+            alt="Portrait of Juana Perez at her web development workspace" width="720" height="703" loading="lazy">
+        </div>
       </section>
     </div>
 
     <section class="panel certificate" aria-labelledby="certificate-heading">
       <h2 id="certificate-heading">Web and Computer Programming Certificate</h2>
-      <div class="certificate-intro"><p>Explore the six courses in my first software development certificate. Select a category to filter the course cards.</p></div>
+      <div class="certificate-intro">
+        <p>Explore the six courses in my first software development certificate. Select a category to filter the course
+          cards.</p>
+      </div>
       <div class="filter-controls" role="group" aria-label="Filter certificate courses">
         <button type="button" data-filter="all" class="selected" aria-pressed="true">All Courses</button>
         <button type="button" data-filter="WDD" aria-pressed="false">WDD Courses</button>
@@ -67,11 +84,15 @@
   </main>
   <footer class="site-footer">
     <div class="social-links">
-      <a href="https://github.com/JPgitidaho" target="_blank" rel="noopener noreferrer" aria-label="Juana Perez on GitHub"><img src="images/github.svg" alt="" width="24" height="24"> GitHub</a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (replace with your actual profile)"><img src="images/linkedin.svg" alt="" width="24" height="24"> LinkedIn</a>
+      <a href="https://github.com/JPgitidaho" target="_blank" rel="noopener noreferrer"
+        aria-label="Juana Perez on GitHub"><img src="images/github.svg" alt="" width="24" height="24"> GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn (replace with your actual profile)"><img src="images/linkedin.svg" alt="" width="24"
+          height="24"> LinkedIn</a>
     </div>
     <p>© <span id="currentyear"></span> Juana Perez · Chile</p>
     <p class="last-updated">Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>
+
 </html>
