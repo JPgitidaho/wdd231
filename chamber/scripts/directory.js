@@ -1,15 +1,4 @@
 
-const currentYear = document.querySelector("#currentyear");
-const lastModified = document.querySelector("#lastModified");
-
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-}
-
-if (lastModified) {
-    lastModified.textContent = document.lastModified;
-}
-/*member directory script*/
 const membersContainer = document.querySelector("#members-container");
 const gridButton = document.querySelector("#grid-view");
 const listButton = document.querySelector("#list-view");
@@ -29,6 +18,11 @@ async function loadMembers() {
         }
 
         const members = await response.json();
+
+        if (!Array.isArray(members)) {
+            throw new Error("Invalid member data");
+        }
+
         displayMembers(members);
     } catch (error) {
         console.error("Error loading members:", error);
@@ -37,53 +31,75 @@ async function loadMembers() {
 }
 
 function displayMembers(members) {
-    membersContainer.replaceChildren();
+    const fragment = document.createDocumentFragment();
 
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         const card = document.createElement("article");
         card.className = "member-card";
 
         const image = document.createElement("img");
         image.src = `images/${member.image}`;
         image.alt = `${member.name} business logo`;
-        image.loading = "lazy";
-        image.width = 320;
+        image.width = 180;
         image.height = 180;
+        image.loading = index === 0 ? "eager" : "lazy";
+
+        if (index === 0) {
+            image.fetchPriority = "high";
+        }
 
         const info = document.createElement("div");
         info.className = "member-info";
 
+        const heading = document.createElement("div");
+        heading.className = "member-heading";
+
+        const category = document.createElement("p");
+        category.className = "member-category";
+        category.textContent = member.category;
+
+        const membership = document.createElement("span");
+        membership.className = `membership-badge membership-${member.membership}`;
+        membership.textContent = membershipLevels[member.membership];
+
+        heading.append(category, membership);
+
         const name = document.createElement("h2");
         name.textContent = member.name;
 
-        const category = document.createElement("p");
-        category.textContent = member.category;
+        const description = document.createElement("p");
+        description.className = "member-description";
+        description.textContent = member.description;
+
+        const details = document.createElement("div");
+        details.className = "member-details";
 
         const address = document.createElement("p");
+        address.className = "member-address";
         address.textContent = member.address;
 
         const phone = document.createElement("p");
+        phone.className = "member-phone";
         phone.textContent = member.phone;
 
-        const membership = document.createElement("p");
-        membership.textContent = `Membership: ${membershipLevels[member.membership]}`;
-
         const website = document.createElement("a");
-        website.href = member.website;
-        website.textContent = "Website";
-        website.target = "_blank";
-        website.rel = "noopener noreferrer";
 
         if (member.website.endsWith(".example")) {
-            website.removeAttribute("href");
-            website.removeAttribute("target");
-            website.textContent = "Demo website";
+            website.textContent = "Demo Business";
+        } else {
+            website.href = member.website;
+            website.textContent = "Visit Website";
+            website.target = "_blank";
+            website.rel = "noopener noreferrer";
         }
 
-        info.append(name, category, address, phone, membership, website);
+        details.append(address, phone, website);
+        info.append(heading, name, description, details);
         card.append(image, info);
-        membersContainer.append(card);
+        fragment.append(card);
     });
+
+    membersContainer.replaceChildren(fragment);
 }
 
 function changeView(view) {

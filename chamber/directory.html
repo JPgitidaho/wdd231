@@ -1,15 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Business Directory | Rancagua Chamber of Commerce</title>
-    <meta name="description" content="Explore the business directory of the Rancagua Chamber of Commerce in Chile. Discover local businesses, services, and opportunities.">
+    <meta name="description"
+        content="Explore the business directory of the Rancagua Chamber of Commerce in Chile. Discover local businesses, services, and opportunities.">
     <meta name="author" content="Juana Perez">
     <meta name="theme-color" content="#264653">
+
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preload" as="image" href="images/andes-tecnologia.webp" fetchpriority="high">
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Business Directory | Rancagua Chamber of Commerce">
     <meta property="og:description" content="Discover local businesses and services in Rancagua, Chile.">
@@ -19,23 +23,42 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-<script src="scripts/layout.js" defer></script>
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/directory.js" defer></script>
-<script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
-<header id="site-header" class="site-header"></header>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand" aria-label="Rancagua Chamber of Commerce - Home">
+                <img src="images/favicon.svg" alt="" width="48" height="48">
+                <span class="brand-name">Rancagua Chamber of Commerce</span>
+            </a>
 
-<nav id="primary-navigation" class="site-nav" aria-label="Main navigation"></nav>
-   
+            <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu"
+                aria-controls="primary-navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <nav id="primary-navigation" class="site-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" aria-current="page">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section class="directory-section" aria-labelledby="directory-heading">
@@ -45,30 +68,39 @@
             </div>
 
             <div class="directory-controls" role="group" aria-label="Directory display options">
-                <button
-                    type="button"
-                    id="grid-view"
-                    class="view-button"
-                    aria-pressed="true">
+                <button type="button" id="grid-view" class="view-button" aria-pressed="true">
                     Grid View
                 </button>
 
-                <button
-                    type="button"
-                    id="list-view"
-                    class="view-button"
-                    aria-pressed="false">
+                <button type="button" id="list-view" class="view-button" aria-pressed="false">
                     List View
                 </button>
             </div>
 
-            <div id="members-container" class="members-grid" aria-live="polite">
-                <!-- Member cards will be generated from members.json -->
-            </div>
+            <div id="members-container" class="members-grid" aria-live="polite"></div>
         </section>
     </main>
 
-    <footer id="site-footer" class="site-footer"></footer>
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/favicon.svg" alt="" width="48" height="48">
+                    <div>
+                        <h2>Rancagua Chamber of Commerce</h2>
+                        <p>O'Higgins Region, Chile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentyear"></span> Juana Perez | WDD 231</p>
+                <p class="last-modified">
+                    Last Modification: <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
