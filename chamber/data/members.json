@@ -2,65 +2,72 @@
 [
   {
     "name": "Andes Tecnología",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "101 Summit Avenue, Downtown Rancagua, Chile",
+    "phone": "+56 9 0000 0101",
     "website": "https://andes-tecnologia.example",
     "image": "andes-tecnologia.webp",
     "membership": 3,
-    "category": "Technology and Software"
+    "category": "Technology and Software",
+    "description": "Web development, custom software, IT consulting, and digital solutions for local businesses."
   },
   {
     "name": "Valle Central Café",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "225 Valley Street, Rancagua, Chile",
+    "phone": "+56 9 0000 0102",
     "website": "https://valle-central-cafe.example",
     "image": "valle-central-cafe.webp",
     "membership": 2,
-    "category": "Coffee Shop"
+    "category": "Food and Beverages",
+    "description": "Specialty coffee, fresh pastries, breakfast options, and a welcoming space for community gatherings."
   },
   {
     "name": "Rancagua Construcciones",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "340 Builders Avenue, Rancagua, Chile",
+    "phone": "+56 9 0000 0103",
     "website": "https://rancagua-construcciones.example",
     "image": "rancagua-construcciones.webp",
     "membership": 3,
-    "category": "Construction"
+    "category": "Construction and Renovation",
+    "description": "Residential construction, commercial renovations, building maintenance, and property improvement services."
   },
   {
     "name": "O'Higgins Market",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "115 Community Street, Rancagua, Chile",
+    "phone": "+56 9 0000 0104",
     "website": "https://ohiggins-market.example",
     "image": "ohiggins-market.webp",
     "membership": 1,
-    "category": "Retail"
+    "category": "Retail and Local Products",
+    "description": "Everyday essentials, household products, fresh goods, and locally produced merchandise."
   },
   {
     "name": "Cordillera Turismo",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "480 Mountain View Avenue, Rancagua, Chile",
+    "phone": "+56 9 0000 0105",
     "website": "https://cordillera-turismo.example",
     "image": "cordillera-turismo.webp",
     "membership": 2,
-    "category": "Tourism"
+    "category": "Tourism and Recreation",
+    "description": "Mountain excursions, outdoor adventures, guided nature experiences, and regional tourism activities."
   },
   {
     "name": "Raíces del Valle",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "205 Artisan Street, Rancagua, Chile",
+    "phone": "+56 9 0000 0106",
     "website": "https://raices-del-valle.example",
     "image": "raices-del-valle.webp",
     "membership": 1,
-    "category": "Handmade Products"
+    "category": "Handmade and Artisan Products",
+    "description": "Handcrafted gifts, home decorations, traditional products, and locally inspired artisan collections."
   },
   {
     "name": "Andes Consultores",
-    "address": "Dirección de demostración, Rancagua",
-    "phone": "No disponible",
+    "address": "510 Business Center Avenue, Rancagua, Chile",
+    "phone": "+56 9 0000 0107",
     "website": "https://andes-consultores.example",
     "image": "andes-consultores.webp",
     "membership": 2,
-    "category": "Professional Services"
+    "category": "Business and Professional Services",
+    "description": "Business strategy, financial planning, administrative consulting, and professional support for entrepreneurs."
   }
 ]
