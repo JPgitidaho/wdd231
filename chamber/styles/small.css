@@ -16,7 +16,7 @@
 body {
     min-width: 320px;
     margin: 0;
-    background-color: var(--background);
+    background: var(--background);
     color: var(--text);
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
@@ -32,7 +32,6 @@ h3 {
 img {
     display: block;
     max-width: 100%;
-    height: auto;
 }
 
 button {
@@ -51,7 +50,7 @@ button:focus-visible {
 }
 
 .site-header {
-    background-color: var(--surface);
+    background: var(--surface);
 }
 
 .header-container {
@@ -61,7 +60,7 @@ button:focus-visible {
     gap: 1rem;
     max-width: 1040px;
     min-height: 72px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0.75rem 1rem;
 }
 
@@ -74,7 +73,6 @@ button:focus-visible {
 
 .brand {
     min-width: 0;
-    color: var(--primary);
     text-decoration: none;
 }
 
@@ -89,23 +87,20 @@ button:focus-visible {
     font-family: "Montserrat", sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
-    line-height: 1.35;
 }
 
 .menu-button {
-    flex-shrink: 0;
     padding: 0.4rem 0.6rem;
     border: 1px solid var(--secondary);
     border-radius: 0.5rem;
-    background-color: var(--surface);
+    background: var(--surface);
     color: var(--primary);
     font-size: 1.5rem;
-    line-height: 1;
 }
 
 .site-nav {
     display: none;
-    background-color: var(--primary);
+    background: var(--primary);
 }
 
 .site-nav.open {
@@ -114,7 +109,7 @@ button:focus-visible {
 
 .site-nav ul {
     max-width: 1040px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0.5rem 1rem;
     list-style: none;
 }
@@ -130,66 +125,36 @@ button:focus-visible {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-    background-color: var(--accent);
+    background: var(--accent);
     color: var(--text);
 }
 
 main {
     width: min(100% - 2rem, 1040px);
     min-height: 100vh;
-    margin: 0 auto;
+    margin: auto;
     padding: 1.75rem 0 3rem;
-}
-
-.directory-section {
-    width: 100%;
 }
 
 .directory-header {
     position: relative;
-    isolation: isolate;
     overflow: hidden;
     padding: 2.25rem 1.5rem;
     border-radius: 1rem;
-    background: linear-gradient(
-        125deg,
-        var(--primary),
-        color-mix(in srgb, var(--primary) 68%, var(--secondary))
-    );
+    background: linear-gradient(125deg, var(--primary), var(--secondary));
     color: var(--surface);
-}
-
-.directory-header::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -80px;
-    right: -95px;
-    width: 260px;
-    height: 260px;
-    border: 1px solid rgb(255 255 255 / 16%);
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 32px rgb(255 255 255 / 4%),
-        0 0 0 68px rgb(255 255 255 / 4%),
-        0 0 0 110px rgb(255 255 255 / 3%);
 }
 
 .directory-header::after {
     content: "";
     position: absolute;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-    width: 65%;
-    height: 60%;
-    background: repeating-linear-gradient(
-        135deg,
-        transparent,
-        transparent 24px,
-        rgb(255 255 255 / 5%) 25px,
-        transparent 26px
-    );
+    right: -70px;
+    top: -90px;
+    width: 240px;
+    height: 240px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    opacity: 0.35;
     pointer-events: none;
 }
 
@@ -199,16 +164,16 @@ main {
     max-width: 650px;
 }
 
-.directory-header .directory-eyebrow {
+.directory-eyebrow {
     display: inline-block;
     margin: 0 0 1rem;
     padding: 0.35rem 0.7rem;
     border: 1px solid var(--accent);
     border-radius: 0.35rem;
     color: var(--surface);
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.1em;
 }
 
 .directory-header h1 {
@@ -216,15 +181,12 @@ main {
     color: var(--surface);
     font-size: clamp(1.8rem, 5vw, 2.7rem);
     font-weight: 800;
-    line-height: 1.15;
 }
 
-.directory-header .directory-intro {
+.directory-intro {
     max-width: 55ch;
     margin: 0;
-    color: var(--surface);
     font-size: 0.9rem;
-    line-height: 1.75;
 }
 
 .directory-toolbar {
@@ -235,9 +197,9 @@ main {
     gap: 1rem;
     margin: 1.5rem 0 1.25rem;
     padding: 1rem;
-    border: 1px solid color-mix(in srgb, var(--primary) 12%, var(--surface));
+    border: 1px solid var(--text-muted);
     border-radius: 0.75rem;
-    background-color: var(--surface);
+    background: var(--surface);
 }
 
 .directory-toolbar-text {
@@ -249,91 +211,80 @@ main {
 .toolbar-indicator {
     width: 4px;
     height: 38px;
-    flex-shrink: 0;
     border-radius: 4px;
-    background-color: var(--secondary);
+    background: var(--secondary);
 }
 
 .directory-toolbar h2 {
     margin: 0;
     color: var(--primary);
     font-size: 1rem;
-    font-weight: 700;
 }
 
 .directory-toolbar p {
-    margin: 0.1rem 0 0;
+    margin: 0;
     color: var(--text-muted);
     font-size: 0.75rem;
 }
 
 .directory-controls {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.35rem;
     padding: 0.3rem;
-    border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--surface));
     border-radius: 0.6rem;
-    background-color: var(--background);
+    background: var(--background);
 }
 
 .view-button {
     padding: 0.6rem 0.85rem;
     border: 0;
     border-radius: 0.4rem;
-    background-color: transparent;
+    background: transparent;
     color: var(--primary);
     font-size: 0.8rem;
     font-weight: 700;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .view-button:hover {
-    background-color: color-mix(in srgb, var(--secondary) 12%, var(--surface));
+    background: var(--accent);
+    color: var(--text);
 }
 
 .view-button[aria-pressed="true"] {
-    background-color: var(--primary);
+    background: var(--primary);
     color: var(--surface);
 }
 
 .members-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
+    align-items: start;
     gap: 1rem;
 }
 
 .member-card {
     min-width: 0;
     overflow: hidden;
-    border: 1px solid color-mix(in srgb, var(--primary) 20%, var(--surface));
-    border-radius: 0.85rem;
-    background-color: var(--surface);
-    box-shadow: 0 4px 16px rgb(27 38 49 / 5%);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid var(--text-muted);
+    border-radius: 0.75rem;
+    background: var(--surface);
+    transition: transform 0.25s ease;
 }
 
 .member-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgb(27 38 49 / 10%);
 }
 
 .member-card img {
     width: 112px;
     height: 112px;
     margin: 1rem auto 0.35rem;
-    padding: 0;
     object-fit: contain;
     border-radius: 0.4rem;
-    transition: transform 0.3s ease;
-}
-
-.member-card:hover img {
-    transform: scale(1.035);
 }
 
 .member-info {
-    padding: 0.85rem 1rem 1rem;
+    padding: 0.85rem 1rem;
     overflow-wrap: anywhere;
 }
 
@@ -349,20 +300,18 @@ main {
 .member-info .member-category {
     margin: 0;
     color: var(--primary);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.055em;
+    letter-spacing: 0.04em;
 }
 
 .membership-badge {
-    display: inline-block;
-    flex-shrink: 0;
     padding: 0.2rem 0.55rem;
     border-radius: 1rem;
-    background-color: var(--background);
+    background: var(--background);
     color: var(--primary);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 700;
 }
 
@@ -375,7 +324,7 @@ main {
 }
 
 .membership-3 {
-    background-color: var(--accent);
+    background: var(--accent);
     color: var(--text);
 }
 
@@ -383,8 +332,6 @@ main {
     margin: 0 0 0.4rem;
     color: var(--primary);
     font-size: 1.05rem;
-    font-weight: 700;
-    line-height: 1.3;
 }
 
 .member-info p {
@@ -400,7 +347,7 @@ main {
 .member-details {
     margin-top: 0.7rem;
     padding-top: 0.65rem;
-    border-top: 1px solid color-mix(in srgb, var(--secondary) 30%, var(--surface));
+    border-top: 1px solid var(--secondary);
 }
 
 .member-address,
@@ -412,26 +359,23 @@ main {
 
 .member-address::before {
     content: "⌖";
-    flex-shrink: 0;
-    color: var(--secondary);
-    font-size: 1.1rem;
-    line-height: 1.3;
 }
 
 .member-phone::before {
     content: "☎";
+}
+
+.member-address::before,
+.member-phone::before {
     flex-shrink: 0;
     color: var(--secondary);
-    font-size: 0.95rem;
 }
 
 .member-info a {
     display: inline-block;
     margin-top: 0.4rem;
-    color: var(--primary);
     font-size: 0.82rem;
     font-weight: 700;
-    text-underline-offset: 3px;
 }
 
 .member-details a:not([href]) {
@@ -440,23 +384,18 @@ main {
     text-decoration: none;
 }
 
-.members-grid .member-card {
+.members-grid .member-card,
+.members-grid .member-info {
     display: flex;
     flex-direction: column;
 }
 
 .members-grid .member-info {
-    display: flex;
     flex: 1;
-    flex-direction: column;
 }
 
 .members-grid .member-description {
     flex: 1;
-}
-
-.members-grid .member-details {
-    margin-top: 0.7rem;
 }
 
 .members-list {
@@ -465,16 +404,8 @@ main {
     gap: 0.7rem;
 }
 
-.members-list .member-card {
-    border-radius: 0.65rem;
-}
-
 .members-list .member-card img {
     display: none;
-}
-
-.members-list .member-info {
-    padding: 0.85rem 1rem;
 }
 
 .members-list .member-heading,
@@ -482,7 +413,7 @@ main {
     margin-bottom: 0.3rem;
 }
 
-.members-list .member-info .member-description {
+.members-list .member-description {
     margin: 0.25rem 0;
 }
 
@@ -491,31 +422,26 @@ main {
     padding-top: 0.5rem;
 }
 
-.members-list .member-details a {
-    margin-top: 0.25rem;
-}
-
 .site-footer {
     border-top: 4px solid var(--secondary);
-    background-color: var(--surface);
+    background: var(--surface);
 }
 
 .footer-container {
     width: min(100% - 2rem, 1040px);
-    margin: 0 auto;
+    margin: auto;
     padding: 2rem 0 1.5rem;
 }
 
 .footer-top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
     padding-bottom: 1.5rem;
 }
 
 .footer-brand h2 {
-    margin: 0 0 0.25rem;
+    margin: 0;
     color: var(--primary);
     font-size: 0.95rem;
 }
@@ -528,7 +454,7 @@ main {
 
 .footer-bottom {
     padding-top: 1rem;
-    border-top: 1px solid color-mix(in srgb, var(--primary) 18%, var(--surface));
+    border-top: 1px solid var(--secondary);
     text-align: center;
 }
 
@@ -547,7 +473,6 @@ main {
     *,
     *::before,
     *::after {
-        scroll-behavior: auto !important;
         animation: none !important;
         transition: none !important;
     }
