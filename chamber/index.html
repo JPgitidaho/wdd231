@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Rancagua Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the Rancagua Chamber of Commerce. Discover local businesses, community events, weather updates, and opportunities to connect in Rancagua, Chile.">
+    <meta name="author" content="Juana Perez">
+    <meta name="theme-color" content="#264653">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home | Rancagua Chamber of Commerce">
+    <meta property="og:description"
+        content="Connect with local businesses, discover events, and explore opportunities in Rancagua, Chile.">
+    <meta property="og:image" content="https://jpgitidaho.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://jpgitidaho.github.io/wdd231/chamber/index.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand" aria-label="Rancagua Chamber of Commerce - Home">
+                <img src="images/favicon.svg" alt="" width="48" height="48">
+                <span class="brand-name">Rancagua Chamber of Commerce</span>
+            </a>
+
+            <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu"
+                aria-controls="primary-navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <nav id="primary-navigation" class="site-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="home-hero" aria-labelledby="home-heading">
+            <img src="images/chamber-home-hero.webp" alt="Panoramic view of Rancagua and the Andes" width="1599" height="900"
+                fetchpriority="high">
+
+            <div class="hero-content">
+                <p class="hero-eyebrow">WELCOME TO RANCAGUA</p>
+                <h1 id="home-heading">Connecting Business. Building Community.</h1>
+                <p>Supporting local businesses, encouraging growth, and creating new opportunities in Rancagua, Chile.
+                </p>
+                <a href="join.html" class="hero-cta">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="home-intro" aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Grow With Our Business Community</h2>
+            <p>Discover local businesses, explore community activities, and connect with the people driving economic
+                growth in the O'Higgins Region.</p>
+        </section>
+
+        <div class="home-information">
+            <section class="home-events" aria-labelledby="events-heading">
+                <div class="section-heading">
+                    <h2 id="events-heading">Current Events</h2>
+                    <p>Stay connected with our business community.</p>
+                </div>
+
+                <div class="events-container">
+                    <article class="event-card">
+                        <h3>Upcoming Community Events</h3>
+                        <p>Information about local business meetings, networking opportunities, and community activities
+                            will be announced here.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="home-weather" aria-labelledby="weather-heading">
+                <div class="section-heading">
+                    <h2 id="weather-heading">Rancagua Weather</h2>
+                    <p>Local weather conditions and forecast.</p>
+                </div>
+
+                <div class="weather-card">
+                    <div class="current-weather">
+                        <h3>Current Weather</h3>
+                        <p id="weather-temperature">Loading weather...</p>
+                        <p id="weather-description"></p>
+                    </div>
+
+                    <div class="weather-forecast">
+                        <h3>3-Day Forecast</h3>
+                        <div id="forecast-container" aria-live="polite">
+                            <p>Loading forecast...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="home-spotlights" aria-labelledby="spotlights-heading">
+            <div class="section-heading">
+                <h2 id="spotlights-heading">Featured Businesses</h2>
+                <p>Meet some of our Gold and Silver chamber members.</p>
+            </div>
+            <div id="spotlight-container" class="members-grid" aria-live="polite">
+                <p>Loading featured businesses...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/favicon.svg" alt="" width="48" height="48">
+                    <div>
+                        <h2>Rancagua Chamber of Commerce</h2>
+                        <p>O'Higgins Region, Chile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentyear"></span> Juana Perez | WDD 231</p>
+                <p class="last-modified">
+                    Last Modification: <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
