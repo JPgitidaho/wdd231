@@ -492,10 +492,10 @@ main {
     z-index: 1;
     background: linear-gradient(
         90deg,
-        rgb(38 70 83 / 82%) 0%,
-        rgb(38 70 83 / 68%) 34%,
-        rgb(38 70 83 / 28%) 58%,
-        rgb(38 70 83 / 8%) 100%
+        color-mix(in srgb, var(--primary) 82%, transparent) 0%,
+        color-mix(in srgb, var(--primary) 68%, transparent) 34%,
+        color-mix(in srgb, var(--primary) 28%, transparent) 58%,
+        color-mix(in srgb, var(--primary) 8%, transparent) 100%
     );
 }
 
@@ -548,7 +548,7 @@ main {
     color: var(--text);
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--primary) 18%, transparent);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -559,7 +559,7 @@ main {
 
 .hero-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgb(0 0 0 / 22%);
+    box-shadow: 0 14px 28px color-mix(in srgb, var(--primary) 22%, transparent);
 }
 
 .hero-cta:focus-visible {
@@ -684,7 +684,6 @@ main {
     gap: 0.65rem;
 }
 
-
 .forecast-day {
     padding: 0.85rem 0.75rem;
     border-radius: 0.5rem;
@@ -708,7 +707,6 @@ main {
     font-weight: 700;
 }
 
-
 .home-spotlights {
     margin-top: 3.5rem;
 }
@@ -719,12 +717,7 @@ main {
     height: 100%;
     border: 1px solid var(--secondary);
     border-radius: 0.9rem;
-    background: var(--surface);
     transition: transform 0.2s ease;
-}
-
-.home-spotlights .member-card:hover {
-    transform: translateY(-4px);
 }
 
 .spotlight-media {
@@ -758,11 +751,6 @@ main {
     background: var(--surface);
 }
 
-.spotlight-badge.membership-3 {
-    background: var(--accent);
-    color: var(--text);
-}
-
 .home-spotlights .spotlight-info {
     display: flex;
     flex: 1;
@@ -773,11 +761,8 @@ main {
 
 .spotlight-heading .member-category {
     margin: 0 0 0.35rem;
-    color: var(--primary);
     font-size: 0.75rem;
-    font-weight: 700;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
 }
 
 .spotlight-heading h3 {
