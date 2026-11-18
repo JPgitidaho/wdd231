@@ -816,15 +816,6 @@ main {
     text-underline-offset: 4px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition: none !important;
-    }
-}
-
 .join-header {
     margin-bottom: 2rem;
     padding: 2.5rem 1.5rem;
