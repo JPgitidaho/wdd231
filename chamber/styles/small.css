@@ -1138,6 +1138,7 @@ main {
     box-shadow: inset 0 -4px 0 var(--accent);
 }
 
+
 @media (prefers-reduced-motion: reduce) {
     .membership-card {
         animation: none;
@@ -1150,4 +1151,10 @@ main {
     .membership-details {
         transition: none;
     }
+
+    .member-card:hover,
+    .hero-cta:hover {
+        transform: none;
+    }
 }
+
