@@ -1137,3 +1137,17 @@ main {
 .thankyou-back:hover {
     box-shadow: inset 0 -4px 0 var(--accent);
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+    }
+
+    .member-card,
+    .home-spotlights .member-card,
+    .hero-cta,
+    .join-form .join-submit,
+    .membership-details {
+        transition: none;
+    }
+}

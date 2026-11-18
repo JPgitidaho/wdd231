@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,78 +78,37 @@
                 <form class="join-form" action="thankyou.html" method="get">
                     <label for="first-name">
                         First Name <span aria-hidden="true">*</span>
-                        <input
-                            type="text"
-                            id="first-name"
-                            name="first-name"
-                            title="Enter your first name"
-                            autocomplete="given-name"
-                            required>
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
                     </label>
 
                     <label for="last-name">
                         Last Name <span aria-hidden="true">*</span>
-                        <input
-                            type="text"
-                            id="last-name"
-                            name="last-name"
-                            title="Enter your last name"
-                            autocomplete="family-name"
-                            required>
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
                     </label>
 
                     <label for="organization-title">
                         Position in Your Organization
-                        <input
-                            type="text"
-                            id="organization-title"
-                            name="organization-title"
-                            title="Use at least seven letters, spaces, or hyphens"
-                            autocomplete="organization-title"
-                            pattern="[A-Za-z\s\-]{7,}">
+                        <input type="text" id="organization-title" name="organization-title" title="Use at least seven letters, spaces, or hyphens" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                     </label>
 
                     <label for="email">
                         Email Address <span aria-hidden="true">*</span>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            title="Enter a valid email address"
-                            autocomplete="email"
-                            placeholder="name@example.com"
-                            required>
+                        <input type="email" id="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="name@example.com" required>
                     </label>
 
                     <label for="phone">
                         Mobile Phone <span aria-hidden="true">*</span>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            title="Enter your mobile phone number"
-                            autocomplete="tel"
-                            required>
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
                     </label>
 
                     <label for="organization">
                         Business or Organization Name <span aria-hidden="true">*</span>
-                        <input
-                            type="text"
-                            id="organization"
-                            name="organization"
-                            title="Enter your business or organization name"
-                            autocomplete="organization"
-                            required>
+                        <input type="text" id="organization" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
                     </label>
 
                     <label for="membership">
                         Membership Level <span aria-hidden="true">*</span>
-                        <select
-                            id="membership"
-                            name="membership"
-                            title="Choose a membership level"
-                            required>
+                        <select id="membership" name="membership" title="Choose a membership level" required>
                             <option value="" selected disabled>Select a membership level</option>
                             <option value="np">NP Membership</option>
                             <option value="bronze">Bronze Membership</option>
@@ -161,12 +119,7 @@
 
                     <label for="description">
                         Business or Organization Description
-                        <textarea
-                            id="description"
-                            name="description"
-                            title="Describe your business or organization"
-                            rows="5"
-                            placeholder="Tell us what your organization does."></textarea>
+                        <textarea id="description" name="description" title="Describe your business or organization" rows="5" placeholder="Tell us what your organization does."></textarea>
                     </label>
 
                     <input type="hidden" name="timestamp" id="timestamp">
@@ -186,52 +139,28 @@
                         <h3>NP Membership</h3>
                         <p class="membership-price">Free</p>
                         <p>For nonprofit organizations serving our community.</p>
-                        <button
-                            type="button"
-                            class="membership-details"
-                            data-modal="np-modal"
-                            aria-haspopup="dialog">
-                            View Benefits
-                        </button>
+                        <button type="button" class="membership-details" data-modal="np-modal" aria-haspopup="dialog">View Benefits</button>
                     </article>
 
                     <article class="membership-card membership-card-bronze">
                         <h3>Bronze Membership</h3>
                         <p class="membership-price">Entry Level</p>
                         <p>Essential connections and community participation.</p>
-                        <button
-                            type="button"
-                            class="membership-details"
-                            data-modal="bronze-modal"
-                            aria-haspopup="dialog">
-                            View Benefits
-                        </button>
+                        <button type="button" class="membership-details" data-modal="bronze-modal" aria-haspopup="dialog">View Benefits</button>
                     </article>
 
                     <article class="membership-card membership-card-silver">
                         <h3>Silver Membership</h3>
                         <p class="membership-price">Enhanced Benefits</p>
                         <p>More visibility, networking, and training opportunities.</p>
-                        <button
-                            type="button"
-                            class="membership-details"
-                            data-modal="silver-modal"
-                            aria-haspopup="dialog">
-                            View Benefits
-                        </button>
+                        <button type="button" class="membership-details" data-modal="silver-modal" aria-haspopup="dialog">View Benefits</button>
                     </article>
 
                     <article class="membership-card membership-card-gold">
                         <h3>Gold Membership</h3>
                         <p class="membership-price">Premium Benefits</p>
                         <p>Our highest level of visibility and member support.</p>
-                        <button
-                            type="button"
-                            class="membership-details"
-                            data-modal="gold-modal"
-                            aria-haspopup="dialog">
-                            View Benefits
-                        </button>
+                        <button type="button" class="membership-details" data-modal="gold-modal" aria-haspopup="dialog">View Benefits</button>
                     </article>
                 </div>
             </aside>
@@ -245,9 +174,7 @@
                 <li>Opportunities to connect with local organizations</li>
                 <li>Invitations to selected community events</li>
             </ul>
-            <form method="dialog">
-                <button type="submit" class="modal-close">Close</button>
-            </form>
+            <button type="button" class="modal-close">Close</button>
         </dialog>
 
         <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-modal-title">
@@ -258,9 +185,7 @@
                 <li>Business directory listing</li>
                 <li>Access to basic member resources</li>
             </ul>
-            <form method="dialog">
-                <button type="submit" class="modal-close">Close</button>
-            </form>
+            <button type="button" class="modal-close">Close</button>
         </dialog>
 
         <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-modal-title">
@@ -272,9 +197,7 @@
                 <li>Professional development and training opportunities</li>
                 <li>Eligibility for featured business spotlights</li>
             </ul>
-            <form method="dialog">
-                <button type="submit" class="modal-close">Close</button>
-            </form>
+            <button type="button" class="modal-close">Close</button>
         </dialog>
 
         <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-modal-title">
@@ -286,9 +209,7 @@
                 <li>Expanded business promotion opportunities</li>
                 <li>Priority registration for selected chamber events</li>
             </ul>
-            <form method="dialog">
-                <button type="submit" class="modal-close">Close</button>
-            </form>
+            <button type="button" class="modal-close">Close</button>
         </dialog>
     </main>
 
