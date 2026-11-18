@@ -824,3 +824,316 @@ main {
         transition: none !important;
     }
 }
+
+.join-header {
+    margin-bottom: 2rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    background: var(--primary);
+    color: var(--surface);
+}
+
+.join-eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--surface);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.join-header h1 {
+    margin: 0 0 0.75rem;
+    color: var(--surface);
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+    line-height: 1.2;
+}
+
+.join-header > p:last-child {
+    max-width: 60ch;
+    margin: 0;
+    color: var(--surface);
+}
+
+.join-layout {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+}
+
+.join-application,
+.membership-section {
+    min-width: 0;
+}
+
+.join-section-heading {
+    margin-bottom: 1.25rem;
+}
+
+.join-section-heading h2 {
+    margin: 0 0 0.5rem;
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.join-section-heading p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.join-form {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 0.9rem;
+    background: var(--surface);
+}
+
+.join-form label {
+    display: block;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.join-form input:not([type="hidden"]),
+.join-form select,
+.join-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 0.75rem;
+    border: 1px solid var(--text-muted);
+    border-radius: 0.4rem;
+    background: var(--surface);
+    color: var(--text);
+    margin-top: 0.4rem;
+    font: inherit;
+    font-weight: 400;
+}
+
+.join-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.join-form input:focus-visible,
+.join-form select:focus-visible,
+.join-form textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--primary);
+}
+
+.join-form .join-submit {
+    min-height: 48px;
+    padding: 0.9rem 1.25rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--primary);
+    color: var(--surface);
+    font-weight: 700;
+    transition: box-shadow 0.2s ease;
+}
+
+.join-form .join-submit:hover {
+    box-shadow: inset 0 -4px 0 var(--accent);
+}
+
+.join-form .join-submit:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.membership-card {
+    padding: 1.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 0.75rem;
+    background: var(--surface);
+    animation: membership-entrance 0.65s ease-out backwards;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.24s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.36s;
+}
+
+.membership-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--primary);
+    font-size: 1.15rem;
+}
+
+.membership-card p {
+    margin: 0.5rem 0 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.membership-card .membership-price {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.membership-card-gold {
+    border-top: 5px solid var(--accent);
+}
+
+.membership-card-silver {
+    border-top: 5px solid var(--secondary);
+}
+
+.membership-card-bronze,
+.membership-card-np {
+    border-top: 5px solid var(--primary);
+}
+
+.membership-details {
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--secondary);
+    border-radius: 0.4rem;
+    background: var(--surface);
+    color: var(--primary);
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.membership-details:hover {
+    background: var(--primary);
+    color: var(--surface);
+}
+
+.membership-modal {
+    width: min(100% - 2rem, 34rem);
+    max-height: 85vh;
+    padding: 2rem;
+    overflow-y: auto;
+    border: 1px solid var(--secondary);
+    border-radius: 0.9rem;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.membership-modal::backdrop {
+    background: color-mix(in srgb, var(--primary) 75%, transparent);
+}
+
+.membership-modal h2 {
+    margin: 0 0 1rem;
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.membership-modal p,
+.membership-modal li {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.membership-modal ul {
+    padding-left: 1.5rem;
+}
+
+.membership-modal li {
+    margin-bottom: 0.5rem;
+}
+
+.modal-close {
+    min-height: 44px;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background: var(--primary);
+    color: var(--surface);
+    font-weight: 700;
+}
+
+.modal-close:hover {
+    box-shadow: inset 0 -4px 0 var(--accent);
+}
+
+@keyframes membership-entrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.thankyou-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 0.9rem;
+    background: var(--surface);
+}
+
+.thankyou-content h2 {
+    margin: 0 0 0.5rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.thankyou-content > p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.thankyou-details {
+    display: grid;
+    margin: 1.5rem 0 2rem;
+}
+
+.thankyou-detail {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.thankyou-detail dt {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.thankyou-detail dd {
+    min-width: 0;
+    margin: 0;
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+.thankyou-back {
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--primary);
+    color: var(--surface);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.thankyou-back:hover {
+    box-shadow: inset 0 -4px 0 var(--accent);
+}

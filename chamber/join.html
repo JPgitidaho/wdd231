@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply to join the Rancagua Chamber of Commerce. Explore membership levels and connect your business with our local community.">
+    <meta name="author" content="Juana Perez">
+    <meta name="theme-color" content="#264653">
+
+    <title>Join | Rancagua Chamber of Commerce</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Join | Rancagua Chamber of Commerce">
+    <meta property="og:description" content="Explore membership benefits and apply to join the Rancagua business community.">
+    <meta property="og:image" content="https://jpgitidaho.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://jpgitidaho.github.io/wdd231/chamber/join.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand" aria-label="Rancagua Chamber of Commerce - Home">
+                <img src="images/favicon.svg" alt="" width="48" height="48">
+                <span class="brand-name">Rancagua Chamber of Commerce</span>
+            </a>
+
+            <button
+                id="menu-button"
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="primary-navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <nav id="primary-navigation" class="site-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html" aria-current="page">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="join-header" aria-labelledby="join-heading">
+            <p class="join-eyebrow">BECOME A MEMBER</p>
+            <h1 id="join-heading">Join the Rancagua Chamber</h1>
+            <p>Connect with local businesses, gain access to valuable resources, and help our community grow.</p>
+        </section>
+
+        <div class="join-layout">
+            <section class="join-application" aria-labelledby="application-heading">
+                <div class="join-section-heading">
+                    <h2 id="application-heading">Membership Application</h2>
+                    <p>Complete the form below to apply. Fields marked with an asterisk (*) are required.</p>
+                </div>
+
+                <form class="join-form" action="thankyou.html" method="get">
+                    <label for="first-name">
+                        First Name <span aria-hidden="true">*</span>
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first-name"
+                            title="Enter your first name"
+                            autocomplete="given-name"
+                            required>
+                    </label>
+
+                    <label for="last-name">
+                        Last Name <span aria-hidden="true">*</span>
+                        <input
+                            type="text"
+                            id="last-name"
+                            name="last-name"
+                            title="Enter your last name"
+                            autocomplete="family-name"
+                            required>
+                    </label>
+
+                    <label for="organization-title">
+                        Position in Your Organization
+                        <input
+                            type="text"
+                            id="organization-title"
+                            name="organization-title"
+                            title="Use at least seven letters, spaces, or hyphens"
+                            autocomplete="organization-title"
+                            pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label for="email">
+                        Email Address <span aria-hidden="true">*</span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            title="Enter a valid email address"
+                            autocomplete="email"
+                            placeholder="name@example.com"
+                            required>
+                    </label>
+
+                    <label for="phone">
+                        Mobile Phone <span aria-hidden="true">*</span>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            title="Enter your mobile phone number"
+                            autocomplete="tel"
+                            required>
+                    </label>
+
+                    <label for="organization">
+                        Business or Organization Name <span aria-hidden="true">*</span>
+                        <input
+                            type="text"
+                            id="organization"
+                            name="organization"
+                            title="Enter your business or organization name"
+                            autocomplete="organization"
+                            required>
+                    </label>
+
+                    <label for="membership">
+                        Membership Level <span aria-hidden="true">*</span>
+                        <select
+                            id="membership"
+                            name="membership"
+                            title="Choose a membership level"
+                            required>
+                            <option value="" selected disabled>Select a membership level</option>
+                            <option value="np">NP Membership</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="description">
+                        Business or Organization Description
+                        <textarea
+                            id="description"
+                            name="description"
+                            title="Describe your business or organization"
+                            rows="5"
+                            placeholder="Tell us what your organization does."></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <button class="join-submit" type="submit">Submit Application</button>
+                </form>
+            </section>
+
+            <aside class="membership-section" aria-labelledby="membership-heading">
+                <div class="join-section-heading">
+                    <h2 id="membership-heading">Membership Levels</h2>
+                    <p>Choose the level that best supports your organization.</p>
+                </div>
+
+                <div class="membership-cards">
+                    <article class="membership-card membership-card-np">
+                        <h3>NP Membership</h3>
+                        <p class="membership-price">Free</p>
+                        <p>For nonprofit organizations serving our community.</p>
+                        <button
+                            type="button"
+                            class="membership-details"
+                            data-modal="np-modal"
+                            aria-haspopup="dialog">
+                            View Benefits
+                        </button>
+                    </article>
+
+                    <article class="membership-card membership-card-bronze">
+                        <h3>Bronze Membership</h3>
+                        <p class="membership-price">Entry Level</p>
+                        <p>Essential connections and community participation.</p>
+                        <button
+                            type="button"
+                            class="membership-details"
+                            data-modal="bronze-modal"
+                            aria-haspopup="dialog">
+                            View Benefits
+                        </button>
+                    </article>
+
+                    <article class="membership-card membership-card-silver">
+                        <h3>Silver Membership</h3>
+                        <p class="membership-price">Enhanced Benefits</p>
+                        <p>More visibility, networking, and training opportunities.</p>
+                        <button
+                            type="button"
+                            class="membership-details"
+                            data-modal="silver-modal"
+                            aria-haspopup="dialog">
+                            View Benefits
+                        </button>
+                    </article>
+
+                    <article class="membership-card membership-card-gold">
+                        <h3>Gold Membership</h3>
+                        <p class="membership-price">Premium Benefits</p>
+                        <p>Our highest level of visibility and member support.</p>
+                        <button
+                            type="button"
+                            class="membership-details"
+                            data-modal="gold-modal"
+                            aria-haspopup="dialog">
+                            View Benefits
+                        </button>
+                    </article>
+                </div>
+            </aside>
+        </div>
+
+        <dialog id="np-modal" class="membership-modal" aria-labelledby="np-modal-title">
+            <h2 id="np-modal-title">NP Membership Benefits</h2>
+            <p>No membership fee for nonprofit organizations.</p>
+            <ul>
+                <li>Access to chamber community information</li>
+                <li>Opportunities to connect with local organizations</li>
+                <li>Invitations to selected community events</li>
+            </ul>
+            <form method="dialog">
+                <button type="submit" class="modal-close">Close</button>
+            </form>
+        </dialog>
+
+        <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-modal-title">
+            <h2 id="bronze-modal-title">Bronze Membership Benefits</h2>
+            <p>Our introductory paid membership level.</p>
+            <ul>
+                <li>Chamber networking event invitations</li>
+                <li>Business directory listing</li>
+                <li>Access to basic member resources</li>
+            </ul>
+            <form method="dialog">
+                <button type="submit" class="modal-close">Close</button>
+            </form>
+        </dialog>
+
+        <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-modal-title">
+            <h2 id="silver-modal-title">Silver Membership Benefits</h2>
+            <p>A higher-tier membership with additional opportunities.</p>
+            <ul>
+                <li>All Bronze Membership benefits</li>
+                <li>Discounts on selected chamber events</li>
+                <li>Professional development and training opportunities</li>
+                <li>Eligibility for featured business spotlights</li>
+            </ul>
+            <form method="dialog">
+                <button type="submit" class="modal-close">Close</button>
+            </form>
+        </dialog>
+
+        <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-modal-title">
+            <h2 id="gold-modal-title">Gold Membership Benefits</h2>
+            <p>Our highest paid membership level.</p>
+            <ul>
+                <li>All Silver Membership benefits</li>
+                <li>Priority consideration for homepage spotlights</li>
+                <li>Expanded business promotion opportunities</li>
+                <li>Priority registration for selected chamber events</li>
+            </ul>
+            <form method="dialog">
+                <button type="submit" class="modal-close">Close</button>
+            </form>
+        </dialog>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/favicon.svg" alt="" width="48" height="48">
+                    <div>
+                        <h2>Rancagua Chamber of Commerce</h2>
+                        <p>O'Higgins Region, Chile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentyear"></span> Juana Perez | WDD 231</p>
+                <p class="last-modified">
+                    Last Modification: <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
