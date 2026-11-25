@@ -1158,18 +1158,43 @@ main {
 
 .discover-grid {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "p1"
+        "p2"
+        "p3"
+        "p4"
+        "p5"
+        "p6"
+        "p7"
+        "p8";
     gap: 1.5rem;
 }
 
+.place-card:nth-child(1) { grid-area: p1; }
+.place-card:nth-child(2) { grid-area: p2; }
+.place-card:nth-child(3) { grid-area: p3; }
+.place-card:nth-child(4) { grid-area: p4; }
+.place-card:nth-child(5) { grid-area: p5; }
+.place-card:nth-child(6) { grid-area: p6; }
+.place-card:nth-child(7) { grid-area: p7; }
+.place-card:nth-child(8) { grid-area: p8; }
+
 .place-card {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
         "image"
         "title"
-        "details"
+        "description"
+        "address"
         "button";
+    grid-template-rows: auto auto 1fr auto auto;
+    align-items: start;
+    gap: 0.75rem;
     min-width: 0;
-    overflow: hidden;
+    padding: 1.25rem;
+    border-top: 4px solid var(--accent);
     border-radius: 0.75rem;
     background: var(--surface);
     box-shadow: 0 6px 20px color-mix(in srgb, var(--primary) 12%, transparent);
@@ -1177,55 +1202,81 @@ main {
 
 .place-image {
     grid-area: image;
+    width: 100%;
+    min-width: 0;
     margin: 0;
 }
 
 .place-image img {
+    display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 3 / 2;
+    border-radius: 0.4rem;
     object-fit: cover;
 }
 
 .place-title {
     grid-area: title;
     margin: 0;
-    padding: 1.25rem 1.25rem 0.5rem;
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 }
 
 .place-details {
-    grid-area: details;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 0 1.25rem 1rem;
+    display: contents;
 }
 
 .place-description {
+    grid-area: description;
     margin: 0;
     color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.6;
-    text-align: left;
 }
 
 .place-address {
+    grid-area: address;
+    margin: 0;
     color: var(--primary);
     font-size: 0.85rem;
     font-style: normal;
     font-weight: 600;
+    overflow-wrap: anywhere;
 }
 
 .place-button {
     grid-area: button;
+    width: 100%;
     min-height: 44px;
-    margin: 0 1.25rem 1.25rem;
-    padding: 0.65rem 1rem;
+    margin: 0;
+    padding: 0.7rem 1rem;
     border: 0;
     border-radius: 0.4rem;
     background: var(--primary);
     color: var(--surface);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
+    align-self: end;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .place-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .place-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px color-mix(in srgb, var(--primary) 18%, transparent);
+    }
+
+    .place-button:hover {
+        background: var(--secondary);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .place-card {
+        transition: none;
+    }
 }
