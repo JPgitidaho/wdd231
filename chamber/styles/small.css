@@ -1,4 +1,3 @@
-
 :root {
     --primary: #264653;
     --secondary: #20776d;
@@ -475,7 +474,7 @@ main {
     color: var(--surface);
 }
 
-.home-hero > img {
+.home-hero>img {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -490,13 +489,11 @@ main {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--primary) 82%, transparent) 0%,
-        color-mix(in srgb, var(--primary) 68%, transparent) 34%,
-        color-mix(in srgb, var(--primary) 28%, transparent) 58%,
-        color-mix(in srgb, var(--primary) 8%, transparent) 100%
-    );
+    background: linear-gradient(90deg,
+            color-mix(in srgb, var(--primary) 82%, transparent) 0%,
+            color-mix(in srgb, var(--primary) 68%, transparent) 34%,
+            color-mix(in srgb, var(--primary) 28%, transparent) 58%,
+            color-mix(in srgb, var(--primary) 8%, transparent) 100%);
 }
 
 .hero-content {
@@ -530,7 +527,7 @@ main {
     text-wrap: balance;
 }
 
-.hero-content > p:not(.hero-eyebrow) {
+.hero-content>p:not(.hero-eyebrow) {
     max-width: 42ch;
     margin: 1rem 0 1.6rem;
     color: var(--surface);
@@ -623,7 +620,7 @@ main {
     border-left: 4px solid var(--accent);
 }
 
-.event-card + .event-card {
+.event-card+.event-card {
     margin-top: 1.75rem;
 }
 
@@ -839,7 +836,7 @@ main {
     line-height: 1.2;
 }
 
-.join-header > p:last-child {
+.join-header>p:last-child {
     max-width: 60ch;
     margin: 0;
     color: var(--surface);
@@ -1086,7 +1083,7 @@ main {
     font-size: 1.5rem;
 }
 
-.thankyou-content > p {
+.thankyou-content>p {
     margin: 0;
     color: var(--text-muted);
 }
@@ -1147,4 +1144,88 @@ main {
     .hero-cta:hover {
         transform: none;
     }
+}
+
+.visit-message {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 0.4rem;
+    background: var(--surface);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.place-card {
+    display: grid;
+    grid-template-areas:
+        "image"
+        "title"
+        "details"
+        "button";
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: var(--surface);
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+.place-image {
+    grid-area: image;
+    margin: 0;
+}
+
+.place-image img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.place-title {
+    grid-area: title;
+    margin: 0;
+    padding: 1.25rem 1.25rem 0.5rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.place-details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0 1.25rem 1rem;
+}
+
+.place-description {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.place-address {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.place-button {
+    grid-area: button;
+    min-height: 44px;
+    margin: 0 1.25rem 1.25rem;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background: var(--primary);
+    color: var(--surface);
+    font-size: 0.85rem;
+    font-weight: 700;
 }

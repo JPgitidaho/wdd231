@@ -284,24 +284,41 @@
     }
 }
 
+
+
+
 @media (min-width: 641px) {
-    .place-card {
-        grid-template-columns: minmax(0, 45%) minmax(0, 1fr);
+    .discover-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-areas:
-            "title title"
-            "image description"
-            "image address"
-            "button button";
-        grid-template-rows: auto 1fr auto auto;
+            "p1 p2"
+            "p3 p4"
+            "p5 p6"
+            "p7 p8";
     }
 
-    .place-button {
-        justify-self: stretch;
+    .place-card:nth-child(1) { grid-area: p1; }
+    .place-card:nth-child(2) { grid-area: p2; }
+    .place-card:nth-child(3) { grid-area: p3; }
+    .place-card:nth-child(4) { grid-area: p4; }
+    .place-card:nth-child(5) { grid-area: p5; }
+    .place-card:nth-child(6) { grid-area: p6; }
+    .place-card:nth-child(7) { grid-area: p7; }
+    .place-card:nth-child(8) { grid-area: p8; }
+
+    .place-image img {
+        height: 220px;
+        aspect-ratio: auto;
+        object-fit: cover;
     }
 }
 
 @media (min-width: 1025px) {
     .discover-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-areas:
+            "p1 p1 p2 p2 p3 p3"
+            "p4 p4 p5 p5 p6 p6"
+            "p7 p7 p7 p8 p8 p8";
     }
 }

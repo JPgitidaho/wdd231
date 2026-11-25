@@ -47,7 +47,11 @@ places.forEach((place, index) => {
         );
     });
 
-    card.append(title, figure, address, description, button);
+    const details = document.createElement("div");
+details.className = "place-details";
+details.append(description, address);
+
+card.append(title, figure, details, button);
     grid.appendChild(card);
 });
 
