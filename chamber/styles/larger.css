@@ -352,3 +352,12 @@
         font-size: 2.7rem;
     }
 }
+@media (min-width: 1200px) {
+    .header-container {
+        padding-left: calc((100vw - 1200px) / 2 + 1rem);
+    }
+
+    .site-nav ul {
+        padding-right: calc((100vw - 1200px) / 2 + 1rem);
+    }
+}
