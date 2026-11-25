@@ -283,3 +283,25 @@
         font-size: 2.7rem;
     }
 }
+
+@media (min-width: 641px) {
+    .place-card {
+        grid-template-columns: minmax(0, 45%) minmax(0, 1fr);
+        grid-template-areas:
+            "title title"
+            "image description"
+            "image address"
+            "button button";
+        grid-template-rows: auto 1fr auto auto;
+    }
+
+    .place-button {
+        justify-self: stretch;
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
