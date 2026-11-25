@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Rancagua | Rancagua Chamber of Commerce</title>
+    <meta name="description" content="Explore eight cultural, historical, and recreational attractions in Rancagua, Chile.">
+    <meta name="author" content="Juana Perez">
+    <meta name="theme-color" content="#264653">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discover Rancagua | Rancagua Chamber of Commerce">
+    <meta property="og:description" content="Explore the culture, history, and attractions of Rancagua, Chile.">
+    <meta property="og:image" content="https://jpgitidaho.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://jpgitidaho.github.io/wdd231/chamber/discover.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand" aria-label="Rancagua Chamber of Commerce - Home">
+                <img src="images/favicon.svg" alt="" width="48" height="48">
+                <span class="brand-name">Rancagua Chamber of Commerce</span>
+            </a>
+
+            <button
+                id="menu-button"
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="primary-navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <nav id="primary-navigation" class="site-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html" aria-current="page">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="discover-section" aria-labelledby="discover-heading">
+            <div class="directory-header">
+                <div class="directory-header-content">
+                    <p class="directory-eyebrow">EXPLORE OUR CITY</p>
+                    <h1 id="discover-heading">Discover Rancagua</h1>
+                    <p class="directory-intro">
+                        Discover the history, culture, and natural beauty of
+                        Rancagua. Explore places that make our community unique.
+                    </p>
+                </div>
+            </div>
+
+            <p id="visit-message" class="visit-message" aria-live="polite"></p>
+
+            <div id="discover-grid" class="discover-grid"></div>
+        </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/favicon.svg" alt="" width="48" height="48">
+                    <div>
+                        <h2>Rancagua Chamber of Commerce</h2>
+                        <p>O'Higgins Region, Chile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentyear"></span> Juana Perez | WDD 231</p>
+                <p class="last-modified">
+                    Last Modification: <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
