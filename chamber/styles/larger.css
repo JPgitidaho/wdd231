@@ -87,8 +87,28 @@
         grid-area: nav;
         display: flex;
         align-items: center;
+        position: sticky;
+        top: 0;
+        left: auto;
+        right: auto;
+        z-index: 10;
         border-bottom: 1px solid var(--secondary);
         background: var(--surface);
+    }
+
+    .home-page .site-nav,
+    .home-page .site-nav.open {
+        background: var(--primary);
+    }
+
+    .home-page .site-nav a {
+        color: var(--surface);
+    }
+
+    .home-page .site-nav a:hover,
+    .home-page .site-nav a[aria-current="page"] {
+        background: var(--accent);
+        color: var(--text);
     }
 
     .site-nav ul {
@@ -182,7 +202,6 @@
         display: block;
         min-height: 560px;
         overflow: hidden;
-        border-radius: 1rem;
     }
 
     .home-hero > img {
@@ -211,9 +230,9 @@
         align-items: flex-start;
         justify-content: center;
         width: 100%;
-        max-width: 680px;
+        max-width: 1200px;
         min-height: 560px;
-        margin: 0;
+        margin: 0 auto;
         padding: 3rem;
         background: transparent;
     }
