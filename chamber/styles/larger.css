@@ -1,11 +1,10 @@
-
-@media (min-width: 640px) {
+@media (min-width: 641px) {
     .directory-header {
         padding: 2.75rem;
     }
 
     .members-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .home-hero,
@@ -18,14 +17,39 @@
     }
 
     #forecast-container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .directory-toolbar {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "summary controls";
+    }
+
+    .directory-controls {
+        justify-self: end;
+    }
+
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "p1 p2"
+            "p3 p3"
+            "p4 p5"
+            "p6 p6"
+            "p7 p8";
+        gap: 1.75rem;
+    }
+
+    .place-image img {
+        height: 220px;
+        object-fit: cover;
     }
 }
 
 @media (min-width: 800px) {
     body {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-columns: 1fr auto;
         grid-template-areas:
             "header nav"
             "main main"
@@ -47,8 +71,7 @@
         max-width: none;
         min-height: 76px;
         margin: 0;
-        padding: 0.75rem 1rem 0.75rem
-            max(1rem, calc((100vw - 1200px) / 2));
+        padding: 0.75rem 1rem;
     }
 
     .brand-name {
@@ -75,7 +98,7 @@
         gap: 0.25rem;
         min-height: 76px;
         margin: 0;
-        padding: 0 max(1rem, calc((100vw - 1200px) / 2)) 0 0;
+        padding: 0 1rem 0 0;
     }
 
     .site-nav a {
@@ -103,40 +126,51 @@
         font-size: 2.6rem;
     }
 
+    .home-intro h2 {
+        font-size: 2.1rem;
+    }
+
+    #weather-temperature {
+        font-size: 4rem;
+    }
+
+    .join-header h1 {
+        font-size: 2.5rem;
+    }
+
     .members-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .members-list .member-info {
         display: grid;
         grid-template-columns: 1fr 1.3fr 1.1fr;
+        grid-template-areas:
+            "heading description details"
+            "title description details";
         grid-template-rows: auto auto;
         align-items: start;
         gap: 0.25rem 1.5rem;
     }
 
     .members-list .member-heading {
-        grid-column: 1;
-        grid-row: 1;
+        grid-area: heading;
         margin: 0;
     }
 
     .members-list .member-info h2 {
-        grid-column: 1;
-        grid-row: 2;
+        grid-area: title;
         margin: 0;
     }
 
     .members-list .member-description {
-        grid-column: 2;
-        grid-row: 1 / 3;
+        grid-area: description;
         align-self: center;
         margin: 0;
     }
 
     .members-list .member-details {
-        grid-column: 3;
-        grid-row: 1 / 3;
+        grid-area: details;
         align-self: center;
         margin: 0;
         padding: 0;
@@ -165,13 +199,7 @@
         position: absolute;
         inset: 0;
         z-index: 1;
-        background: linear-gradient(
-            90deg,
-            rgb(38 70 83 / 90%) 0%,
-            rgb(38 70 83 / 80%) 34%,
-            rgb(38 70 83 / 40%) 62%,
-            rgb(38 70 83 / 10%) 100%
-        );
+        background: linear-gradient(to right, var(--primary), transparent);
         pointer-events: none;
     }
 
@@ -182,7 +210,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        width: min(100%, 680px);
+        width: 100%;
         max-width: 680px;
         min-height: 560px;
         margin: 0;
@@ -192,7 +220,7 @@
 
     .hero-content h1 {
         max-width: 12ch;
-        font-size: clamp(3.2rem, 5vw, 4.5rem);
+        font-size: 3.2rem;
         line-height: 1.1;
     }
 
@@ -207,7 +235,8 @@
     }
 
     .home-information {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "events weather";
         align-items: stretch;
     }
 
@@ -229,26 +258,14 @@
     .site-footer {
         grid-area: footer;
     }
-}
 
-@media (min-width: 1100px) {
-    .home-hero,
-    .home-hero .hero-content {
-        min-height: 580px;
-    }
-
-    .home-hero .hero-content {
-        padding: 3.5rem;
-    }
-}
-
-@media (min-width: 800px) {
     .join-header {
         padding: 3rem 3.25rem;
     }
 
     .join-layout {
-        grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.85fr);
+        grid-template-columns: 1.3fr 0.85fr;
+        grid-template-areas: "application memberships";
         gap: 2.5rem;
     }
 
@@ -269,42 +286,19 @@
     }
 
     .thankyou-detail {
-        grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+        grid-template-columns: 180px 1fr;
+        grid-template-areas: "term value";
         gap: 1.5rem;
     }
 }
 
-@media (min-width: 1100px) {
-    .join-layout {
-        gap: 3rem;
-    }
-
-    .join-header h1 {
-        font-size: 2.7rem;
-    }
-}
-
-@media (min-width: 641px) {
-    .discover-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-areas:
-            "p1 p2"
-            "p3 p3"
-            "p4 p5"
-            "p6 p6"
-            "p7 p8";
-        gap: 1.75rem;
-    }
-
-    .place-card:nth-child(3) .place-image img,
-    .place-card:nth-child(6) .place-image img {
-        aspect-ratio: 16 / 7;
-    }
-}
-
 @media (min-width: 1025px) {
+    .home-information {
+        grid-template-columns: 5fr 7fr;
+    }
+
     .discover-grid {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(6, 1fr);
         grid-template-areas:
             "p1 p1 p2 p2 p3 p3"
             "p4 p4 p4 p5 p5 p5"
@@ -312,8 +306,30 @@
         gap: 2rem;
     }
 
-    .place-card:nth-child(3) .place-image img,
-    .place-card:nth-child(6) .place-image img {
-        aspect-ratio: 3 / 2;
+    .place-card:hover {
+        box-shadow: 0 3px 10px var(--text-muted);
+    }
+
+    .place-button:hover {
+        background: var(--secondary);
+    }
+}
+
+@media (min-width: 1100px) {
+    .home-hero,
+    .home-hero .hero-content {
+        min-height: 580px;
+    }
+
+    .home-hero .hero-content {
+        padding: 3.5rem;
+    }
+
+    .join-layout {
+        gap: 3rem;
+    }
+
+    .join-header h1 {
+        font-size: 2.7rem;
     }
 }
